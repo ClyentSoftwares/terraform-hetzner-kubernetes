@@ -1,0 +1,80 @@
+# ─── Terraform ───────────────────────────────────────────────────────────────
+
+# Local .terraform directories (provider cache, modules)
+**/.terraform/
+
+# Terraform lock file — commit this to pin provider versions
+# .terraform.lock.hcl
+
+# State files
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Terraform plan output files
+*.tfplan
+*.tfplan.*
+
+# Override files (local dev overrides — never commit)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Terraform variable files that may contain secrets
+*.tfvars
+*.tfvars.json
+
+# ─── Helm provider ───────────────────────────────────────────────────────────
+
+# Helm provider writes a kubeconfig here at apply time
+.helm/
+
+# ─── Talos / Kubernetes credentials ─────────────────────────────────────────
+
+# Written by client.tf when cluster_kubeconfig_path / cluster_talosconfig_path
+# are set to a path inside the repo
+*.kubeconfig
+*.talosconfig
+kubeconfig
+talosconfig
+
+# ─── Packer ──────────────────────────────────────────────────────────────────
+
+packer/packer_cache/
+packer/.packer.d/
+packer/crash.log
+
+# ─── Credentials / keys ──────────────────────────────────────────────────────
+
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+
+# ─── OS / Editor noise ───────────────────────────────────────────────────────
+
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.iml
+
+# ─── Secrets and local config ────────────────────────────────────────────────
+
+.env
+.env.*
+secrets.yaml
+secrets.yml
