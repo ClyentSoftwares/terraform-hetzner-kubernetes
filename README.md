@@ -14,8 +14,8 @@ A highly opinionated Terraform module to deploy Kubernetes on both Hetzner Cloud
 
 ```hcl
 module "kubernetes" {
-  source  = "clyentsoftwares/hetzner-kubernetes/hcloud"
-  version = "~> 1.0"
+  source  = "ClyentSoftwares/kubernetes/hetzner"
+  version = "0.1.0"
 
   cluster_name = "k8s"
   hcloud_token = "<hcloud-token>"
