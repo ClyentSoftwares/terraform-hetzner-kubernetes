@@ -31,8 +31,10 @@ locals {
     ]
   )
 
-  # Always include qemu-guest-agent; no optional extensions
-  talos_image_extensions = ["siderolabs/qemu-guest-agent"]
+  talos_image_extensions = [
+    "siderolabs/qemu-guest-agent",
+    "siderolabs/lvm2",
+  ]
 }
 
 data "talos_image_factory_extensions_versions" "this" {

@@ -42,8 +42,14 @@ locals {
     resolveMemberNames   = true
   }
 
-  # Kubelet extra mounts — none by default
-  talos_kubelet_extra_mounts = []
+  talos_kubelet_extra_mounts = [
+    {
+      source      = "/run/topolvm"
+      destination = "/run/topolvm"
+      type        = "bind"
+      options     = ["bind", "rshared", "rw"]
+    }
+  ]
 
   # Public Network Link Config
   talos_public_link_config_patches = [

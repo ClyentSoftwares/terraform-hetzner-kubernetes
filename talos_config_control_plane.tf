@@ -1,7 +1,6 @@
 locals {
   # Unused manifest locals — features not implemented in this module
   kube_api_oidc_configuration = {}
-  longhorn_manifest            = null
   metrics_server_manifest      = null
   ingress_nginx_manifest       = null
   rbac_manifest                = null
