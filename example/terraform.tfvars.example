@@ -1,0 +1,12 @@
+hcloud_token       = "hcloud_token"
+tailscale_auth_key = "tskey-client-xxxxx"  # OAuth client secret (recommended) or tskey-auth-xxx auth key
+
+# Optional: etcd backups to S3-compatible storage
+# talos_backup_s3 = {
+#   enabled    = true
+#   url        = "https://fsn1.your-objectstorage.com"
+#   bucket     = "my-talos-backups"
+#   region     = "auto"
+#   access_key = "your-access-key"
+#   secret_key = "your-secret-key"
+# }
